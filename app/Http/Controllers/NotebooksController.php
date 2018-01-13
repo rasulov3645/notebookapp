@@ -15,4 +15,9 @@ class NotebooksController extends Controller
         // return $notebooks;
         return view('notebooks.index', compact('notebooks'));
     }
+
+    public function create()
+    {
+        return view('notebooks.create');
+    }
 }
