@@ -16,3 +16,4 @@ Route::get('/', function(){
 });
 
 Route::get('/notebooks', 'NotebooksController@index');
+Route::get('/notebooks/create', 'NotebooksController@create');
