@@ -9,7 +9,7 @@
                     Your Notebooks
                 </h1>
                 <div class="pull-xs-right">
-                    <a class="btn btn-primary" href="#" role="button">
+                    <a class="btn btn-primary" href="/notebooks/create" role="button">
                         New NoteBook +
                     </a>
                 </div>
