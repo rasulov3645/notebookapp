@@ -5,12 +5,13 @@
 <div class="container"
     <h1>Create Notebook</h1>
 
-    <form action="">
+    <form action="/notebooks" method="POST">
+        {{ csrf_field() }}
         <div class="form-group">
             <label for="name">Notebook Name</label>
-            <input class="form-control" type="text" name="name"></input>
+            <input class="form-control" name="name" type="text"></input>
         </div>
-        <input class="btn btn-primary" type="submit" name="" value="Done"></input>
+        <input class="btn btn-primary" type="submit" value="Done"></input>
     </form>
 </div>
 @endsection

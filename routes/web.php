@@ -15,5 +15,7 @@ Route::get('/', function(){
     return view('frontpage');
 });
 
+
 Route::get('/notebooks', 'NotebooksController@index');
+Route::post('/notebooks', 'NotebooksController@store');
 Route::get('/notebooks/create', 'NotebooksController@create');

@@ -20,4 +20,16 @@ class NotebooksController extends Controller
     {
         return view('notebooks.create');
     }
+
+    public function store(Request $request)
+    {
+        // return $request-> all();
+        $dataInput = $request->all();
+        Notebook::create($dataInput);
+
+        // return "success";
+        // return url('/notebooks');
+        return redirect('/notebooks');
+    }
+
 }
