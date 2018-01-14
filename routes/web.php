@@ -19,3 +19,6 @@ Route::get('/', function(){
 Route::get('/notebooks', 'NotebooksController@index');
 Route::post('/notebooks', 'NotebooksController@store');
 Route::get('/notebooks/create', 'NotebooksController@create');
+Route::get('/notebooks/{notebooks}', 'NotebooksController@edit');
+Route::put('/notebooks/{notebooks}', 'NotebooksController@update');
+Route::delete('/notebooks/{notebooks}', 'NotebooksController@destroy');
