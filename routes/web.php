@@ -14,7 +14,7 @@
 Auth::routes();
 Route::group(['middleware'=>'auth'],function(){
 	Route::get('/', function () {
-    return view('notebookapp');
+    return view('frontpage');
 	});
 	Route::resource('notebooks','NotebooksController');
 	Route::get('notebooks/{id}/createNote',['as'=>'createNote','uses'=>'NotesController@createNote']);

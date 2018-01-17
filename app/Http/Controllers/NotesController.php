@@ -29,7 +29,7 @@ class NotesController extends Controller
 
         $this->validate($request,[
             'title'=>'required|max:20|unique:notes,title',
-            'body'=>'required|min:50'
+            'body'=>'required|min:30'
             ]);
         Note::create($request->all());
         $notebookId=$request->notebook_id;

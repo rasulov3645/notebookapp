@@ -5,6 +5,13 @@
     <h1>
         Create Note
     </h1>
+
+    {{-- @php
+        var_dump('<pre>');
+        var_dump($errors);
+        var_dump('</pre>');
+    @endphp --}}
+
     @if(count($errors)>0)
         <ul>
             @foreach($errors->all() as $error)
