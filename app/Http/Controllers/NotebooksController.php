@@ -24,6 +24,16 @@ class NotebooksController extends Controller
         return view('notebooks.create');
     }
 
+    public function show($id)
+    {
+        // Что за говно.
+        $notebook = Notebook::findOrFail($id);
+
+        $notes = $notebook->notes;
+
+        return view('notes.index', compact('notes', 'notebook'));
+    }
+
     public function store(Request $request)
     {
         // return $request-> all();

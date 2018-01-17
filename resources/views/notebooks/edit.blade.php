@@ -3,7 +3,11 @@
 
 @section('content')
 <div class="container"
-    <h1>Edit Notebook</h1>
+    <h1 class="pull-xs-left">Edit Notebook</h1>
+    {{-- <br>
+    @php
+        var_dump("edit.blade.php");
+    @endphp --}}
     <form action="/notebooks/{{$notebook->id}}" method="POST">
         {{ csrf_field() }}
         {{ method_field('PUT') }}

@@ -11,25 +11,13 @@
 |
 */
 
-Route::group(['middleware'=>'auth'], function(){
-
-    Route::get('/', function(){
-        return view('frontpage');
-    });
-
-    // Route::get('/notebooks', 'NotebooksController@index')->name('notebooks.indexkk');
-    Route::get('/notebooks', ['as'=>'notebooks.index',
-                              'uses'=>'NotebooksController@index']);
-
-    Route::post('/notebooks', 'NotebooksController@store');
-    Route::get('/notebooks/create', 'NotebooksController@create');
-    Route::get('/notebooks/{notebooks}', 'NotebooksController@edit');
-    Route::put('/notebooks/{notebooks}', 'NotebooksController@update');
-    Route::delete('/notebooks/{notebooks}', 'NotebooksController@destroy');
-
-});
-
-
 Auth::routes();
-
+Route::group(['middleware'=>'auth'],function(){
+	Route::get('/', function () {
+    return view('notebookapp');
+	});
+	Route::resource('notebooks','NotebooksController');
+	Route::get('notebooks/{id}/createNote',['as'=>'createNote','uses'=>'NotesController@createNote']);
+	Route::resource('notes','NotesController');
+});
 Route::get('/home', 'HomeController@index');

@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container"
-    <h1>Create Notebook</h1>
+    <h1 class="pull-xs-left">Create Notebook</h1>
 
     <form action="/notebooks" method="POST">
         {{ csrf_field() }}
